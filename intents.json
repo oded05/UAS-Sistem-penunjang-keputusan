@@ -1,0 +1,57 @@
+{"intents": [
+    {"tag": "greeting",
+     "patterns": ["Hai", "Apa kabar", "Ada orang di sana?", "Halo", "Selamat siang"],
+     "responses": ["Halo, terima kasih telah mengunjungi", "Senang bertemu Anda lagi", "Hai, bagaimana bisa saya membantu?"],
+     "context_set": ""
+    },
+    {"tag": "goodbye",
+     "patterns": ["Sampai jumpa", "Sampai jumpa", "Selamat tinggal"],
+     "responses": ["Sampai jumpa lagi, terima kasih telah mengunjungi", "Semoga harimu menyenangkan", "Sampai jumpa! Kembali lagi nanti."]
+    },
+    {"tag": "thanks",
+     "patterns": ["Terima kasih", "Terima kasih", "Itu membantu"],
+     "responses": ["Senang membantu!", "Kapan saja!", "Senang"]
+    },
+    {"tag": "hours",
+     "patterns": ["Jam berapa kamu buka?", "Jam berapa kamu?", "Kapan kamu buka?"],
+     "responses": ["Kami buka setiap hari jam 9 pagi - 9 malam", "Jam kami adalah jam 9 pagi - 9 malam setiap hari"]
+    },
+    {"tag": "moped",
+     "patterns": ["Moped mana yang Anda miliki?", "Moped jenis apa yang ada di sana?", "Apa yang Anda sewakan?" ],
+     "responses": ["Kami menyewa moped Yamaha, Piaggio, dan Vespa", "Kami memiliki moped Piaggio, Vespa, dan Yamaha"]
+    },
+    {"tag": "payments",
+     "patterns": ["Apakah Anda menerima kartu kredit?", "Apakah Anda menerima Mastercard?", "Apakah Anda hanya menggunakan uang tunai?" ],
+     "responses": ["Kami menerima VISA, Mastercard, dan AMEX", "Kami menerima sebagian besar kartu kredit utama"]
+    },
+    {"tag": "opentoday",
+     "patterns": ["Apakah Anda buka hari ini?", "Kapan Anda buka hari ini?", "Jam berapa hari ini?"],
+     "responses": ["Kami buka setiap hari mulai jam 9 pagi - 9 malam", "Jam kami 9 pagi - 9 malam setiap hari"]
+    },
+    {"tag": "rental",
+     "patterns": ["Bisakah kita menyewa moped?", "Saya ingin menyewa moped", "Bagaimana cara kerjanya?" ],
+     "responses": ["Apakah Anda ingin menyewa hari ini atau nanti minggu ini?"],
+     "context_set": "rentalday"
+    },
+    {"tag": "hari_ini",
+     "patterns": ["hari ini", "sekarang"],
+     "responses": ["Untuk persewaan hari ini silakan hubungi 1-800-MYMOPED", "Sewa di hari yang sama silakan hubungi 1-800-MYMOPED"],
+     "context_filter": "rentalday"
+    },
+    {
+        "tag": "noanswer",
+        "patterns": [""],
+        "responses": ["Maaf, saya tidak mengerti", "Tolong beri saya info lebih lanjut", "Saya tidak mengerti", "bisa di ulang"]
+    },
+    {
+        "tag": "trending",
+        "patterns": ["yang trending?","yang lagi trending di sosial media","sekarang yang lagi boming apa yah?","sekarang yang lagi trending apa yah?"],
+        "responses": ["sekarang lagi trending tentang ","yang lagi trening sekarang itu "],
+        "fullfilment":{
+            "action":"",
+            "parameter":"*" 
+        }
+    }
+    
+]
+}
